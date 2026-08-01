@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- روابط Bootstrap الصحيحة -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+            @font-face {
+                font-family: 'Henny_Penny';
+                src: url('./fonts/HennyPenny-Regular.ttf') format('truetype');
+            }
+            @font-face {
+                font-family: 'Mansalva';
+                src: url('./fonts/Mansalva-Regular.ttf') format('truetype');
+            }
+
+            .Mansalva-font {
+                font-family: 'Mansalva', cursive !important;
+            }
+
+            .hero {
+                background-image: url('/images/background_sky1_l.png');
+                background-repeat: repeat;
+                animation: moveBG 20s linear infinite;
+            }
+
+            @keyframes moveBG {
+                from {
+                    background-position: 0px 0px;
+                }
+
+                to {
+                    background-position: 512px 512px;
+                }
+            }
+
+            .hero-title {
+                font-family: 'Henny_Penny', cursive !important;
+                font-size: 100px;
+            }
+
+            .my-font {
+                font-family: 'Henny_Penny', cursive !important;
+            }
+            /* Team Members Section */
+            .dark-blue-bg {
+                background: #12166A;
+                /*background: #0C043D;*/
+            }
+
+            .darker-blue-bg {
+                background: #0C043D;
+            }
+
+            .team-card {
+                background: #0C043D;
+                border-color: #00ffff;
+                border-radius: 40px;
+                backdrop-filter: blur(15px);
+                transition: transform 0.3s ease;
+            }
+
+                .team-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 0 20px #00ffff;
+                }
+            /* Glowing Text Effect */
+            .glow-text {
+                color: #ffffff; /* لون النص الأساسي */
+                text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff;
+            }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark darker-blue-bg border-bottom border-info border-opacity-25 shadow-lg">
+        <div class="container">
+            <!-- Brand Logo / Name -->
+            <a class="navbar-brand my-font glow-text fs-2" href="#">Signiverse</a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler border-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-lg-3 align-items-center text-center Mansalva-font py-3 py-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-info fw-semibold" href="#challenge">Challenge & Solution</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-info fw-semibold" href="#team">Team Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-info fw-semibold" href="#supervisor">Supervisor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-info fw-semibold" href="#competitions">Competitions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white hover-info hover-info fw-semibold" href="#architecture">Architecture</a>
+                    </li>
+                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                        <a href="/docs/SigniVerse_Final_Documentation.pdf" download="Signiverse_Documentation.pdf" class="btn btn-outline-info btn-sm px-4 rounded-pill text-white shadow-sm">
+                            Documentation 📄
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--landing page-->
+    <section class="hero vh-100 d-flex align-items-center justify-content-center">
+        <h1 class="fw-bold text-white text-center hero-title">
+            Signiverse
+        </h1>
+    </section>
+    <!--Challenge and solution-->
+    <section id="challenge" class="dark-blue-bg position-relative">
+        <div class="container vh-75 p-5 d-flex flex-column text-white justify-content-center">
+            <h1 class="Mansalva-font glow-text my-4" style="font-size: 70px;">Challenge</h1>
+
+            <h2 class="Mansalva-font">
+                Deaf and Hard-of-Hearing children in Jordan have limited access to interactive Jordanian Sign Language learning tools.<br>
+                Most existing independent Jordanian Sign Language learning methods lack engagement and do not provide immediate feedback,
+                making independent practice difficult for deaf children.
+            </h2>
+
+            <h1 class="Mansalva-font glow-text my-4" style="font-size: 70px;">Our solution</h1>
+            <h2 class="Mansalva-font mb-5">
+                Develop SigniVerse, an AI-powered serious mobile game that uses real-time sign
+                recognition and instant feedback to help children learn Jordanian Sign Language through
+                interactive activities and independent practice.</p>
+            </h2>
+        </div>
+
+    </section>
+
+    <!--team-->
+    <!--team section-->
+    <section id="team" class="darker-blue-bg py-5 position-relative">
+        <img src="/images/objects12_s.png"
+             class="img-fluid position-absolute top-0 end-0 translate-middle-y"
+             style="width: 500px; height: auto;" />
+
+        <div class="container py-4">
+            <div class="row g-4 justify-content-center align-items-stretch">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h1 class="Mansalva-font text-white text-center my-2" style="font-size: 70px;">Team Members</h1>
+                    <p class="text-info opacity-75 fs-5">The minds behind Signiverse</p>
+                </div>
+                <!-- Member 1 -->
+                <div class="col-12 col-lg-3 d-flex align-items-stretch">
+                    <div class="card w-100 rounded-5 team-card overflow-hidden">
+                        <img class="card-img-top object-fit-cover" src="/images/girl_1.png" alt="Rama Nedal" style="height: 500px;" />
+                        <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
+                            <h4 class="card-title h5 mt-2">Rama Nedal</h4>
+                            <p class="card-text small text-white-50">Signiverse Game developer and designer</p>
+                            <a href="https://www.linkedin.com/in/rama-nedal-181331302/" class="btn  btn-outline-info btn-sm px-4 rounded-pill">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="col-12 col-lg-3 d-flex align-items-stretch">
+                    <div class="card w-100 rounded-5 team-card overflow-hidden">
+                        <img class="card-img-top object-fit-cover" src="/images/girl_2.png" alt="Farah Alshalalfeh" style="height: 500px;" />
+                        <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
+                            <h4 class="card-title h5 mt-2">Farah Alshalalfeh</h4>
+                            <p class="card-text small text-white-50">Computer vision and machine learning developer</p>
+                            <a href="https://www.linkedin.com/in/farah-alshalalfeh-a11ab8283/" class="btn  btn-outline-info btn-sm px-4 rounded-pill" text-white>LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="col-12 col-lg-3 d-flex align-items-stretch">
+                    <div class="card w-100 rounded-5 team-card overflow-hidden">
+                        <img class="card-img-top object-fit-cover" src="/images/girl_3.png" alt="Eman Wazayfy" style="height: 500px;" />
+                        <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
+                            <h4 class="card-title h5 mt-2">Eman Wazayfy</h4>
+                            <p class="card-text small text-white-50">Signiverse Game developer and designer</p>
+                            <a href="https://www.linkedin.com/in/eman-wazayfy-0aa39b247" class="btn  btn-outline-info btn-sm px-4 rounded-pill">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="col-12 col-lg-3 d-flex align-items-center">
+                    <div class="card w-100 rounded-5 team-card overflow-hidden">
+                        <img class="card-img-top object-fit-cover" src="/images/girl_4.png" alt="Yara Yaghi" style="height: 500px;" />
+                        <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
+                            <h4 class="card-title h5 mt-2">Yara Yaghi</h4>
+                            <p class="card-text small text-white-50">Computer vision and machine learning developer</p>
+                            <a href="https://www.linkedin.com/in/yara1604/" class="btn  btn-outline-info btn-sm px-4 rounded-pill">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- University of Jordan & Supervisor Section (Full Height) -->
+    <section id="supervisor" class="dark-blue-bg vh-75 position-relative">
+        <div class="container-fluid h-100">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 h-100 pb-4 d-flex flex-column justify-content-center align-items-center text-center">
+                    <img src="/images/dr.webp" class="rounded-circle my-4" style="width: 300px;" />
+                    <h2 class="Mansalva-font text-white display-5 mb-5">
+                        This project was supervised by <span class="text-info fw-bold">Dr. Abdelbaset J. Assaf</span> from the <span class="text-info">University of Jordan</span>
+                    </h2>
+                    <!-- Download Button Container -->
+                    <div class="d-flex justify-content-center justify-content-center pt-2">
+                        <a href="/docs/SigniVerse_Final_Documentation.pdf" download="Signiverse_Documentation.pdf" class="btn btn-outline-info btn-download-pdf px-4 py-3 rounded-pill fw-bold shadow">
+                            <span>Download Documentation</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--competitions section-->
+    <section id="competitions" class="darker-blue-bg d-flex flex-column justify-content-center align-items-center position-relative">
+        <img src="/images/simple_planet_22_s.png"
+             class="img-fluid position-absolute top-0 end-0 translate-middle-y"
+             style="width: 300px; height: auto;" />
+        <div class="container my-5" style="max-width: 1000px;">
+            <div class="my-3 text-center text-white">
+                <h2 class="Mansalva-font fw-bold" style="font-size: 70px;">Competitions & Achievements</h2>
+                <p class="text-white-50">Highlights of the competitions and hackathons our team has participated in</p>
+            </div>
+            <div id="carouser1" class="carousel slide rounded-4 overflow-hidden shadow-lg" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouser1" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouser1" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouser1" data-bs-slide-to="2"></button>
+                </div>
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <!-- first item-->
+                    <div class="carousel-item active" data-bs-interval="60000">
+                        <div class="card border-0">
+                            <img src="/images/innovateToStart.jpeg" style="height: 500px;" />
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-4" style="background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
+                                <div class="d-flex gap-2 mb-2">
+                                    <span class="badge bg-warning text-dark align-self-start px-3 py-2 fs-6">4th Place Winner 🏅</span>
+                                    <span class="badge bg-success align-self-start px-3 py-2 fs-6">150 JOD Prize 💰</span>
+                                </div>
+                                <h3 class="fw-bold fs-2 text-white">Start to Innovate 2026</h3>
+                                <p class="fs-6 text-light mb-1">
+                                    Organized by <strong>intaj</strong> & <strong>Orange Jordan</strong>.
+                                </p>
+                                <p class="fs-6 text-white-50">
+                                    Signiverse achieved 4th place among top innovative projects, recognizing our impact and technology in empowering the community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--second item-->
+                    <div class="carousel-item" data-bs-interval="60000">
+                        <div class="card border-0">
+                            <img src="/images/GJU Event.jpeg" style="height: 500px;" />
+                            <div class="card-img-overlay d-flex flex-column justify-content-end p-4" style="background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
+                                <h3 class="card-title fw-bold fs-2 text-white">GJU-3030 Competition 🏫</h3>
+
+                                <p class="card-text fs-6 text-light mb-1">
+                                    Organized by the <strong>Deanship of Student Affairs - German Jordanian University (GJU)</strong>.
+                                </p>
+                                <p class="card-text fs-6 text-white-50">
+                                    Our entire Signiverse team actively engaged in the 30×30 event, pitching our ideas, networking, and representing our project among top university innovators.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--third item-->
+                    <div class="carousel-item" data-bs-interval="60000*2">
+                        <div class="card border-0">
+                            <!-- <video class="w-100" autoplay loop muted controls playsinline style="height: 450px; object-fit: cover;">
+                                <source src="/images/v1.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                            </video> -->
+                            <div class="ratio ratio-16x9" style="height: 500px;">
+                                <iframe src="https://www.youtube.com/embed/9Ta5vH2VcQQ?autoplay=1&mute=1&controls=1&rel=0"
+                                        title="Signiverse Demo"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouser1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouser1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+      
+    <!--System architecture -->
+    <!-- System Architecture Section -->
+    <section id="architecture" class="dark-blue-bg py-5 text-white position-relative">
+
+        <div class="container my-4">
+
+            <!-- Title & Subtitle -->
+            <div class="text-center mb-5">
+                <h1 class="Mansalva-font display-4 fw-bold text-info mb-2">System Architecture</h1>
+                <p class="text-white-50 fs-5">How Signiverse processes real-time sign recognition behind the scenes</p>
+            </div>
+
+            <!-- Steps List using Bootstrap Classes Only -->
+            <div class="d-flex flex-column gap-3">
+
+                <!-- Step 1 -->
+                <div class="d-flex align-items-center p-3 rounded-4 bg-dark bg-opacity-50 border border-info border-opacity-25 shadow">
+                    <span class="badge bg-info text-dark rounded-circle p-3 me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">1</span>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-white">Launch App</h5>
+                        <p class="mb-0 text-white-50">Open the <strong>Signiverse</strong> application.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="d-flex align-items-center p-3 rounded-4 bg-dark bg-opacity-50 border border-info border-opacity-25 shadow">
+                    <span class="badge bg-info text-dark rounded-circle p-3 me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">2</span>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-white">Select Game</h5>
+                        <p class="mb-0 text-white-50">Choose a minigame and start playing.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="d-flex align-items-center p-3 rounded-4 bg-dark bg-opacity-50 border border-info border-opacity-25 shadow">
+                    <span class="badge bg-info text-dark rounded-circle p-3 me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">3</span>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-white">Camera Initialization</h5>
+                        <p class="mb-0 text-white-50">The live device camera and sign target panel open automatically.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="arch-card d-flex align-items-center p-3 rounded-4 bg-dark bg-opacity-50 border border-info border-opacity-25 shadow">
+                    <span class="badge bg-info text-dark rounded-circle p-3 me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">4</span>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-white">Landmark Tracking</h5>
+                        <p class="mb-0 text-white-50">Integrated <strong>MediaPipe plugin</strong> scans hand & body landmarks in real-time.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="d-flex align-items-center p-3 rounded-4 bg-dark bg-opacity-50 border border-info border-opacity-25 shadow">
+                    <span class="badge bg-info text-dark rounded-circle p-3 me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">5</span>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-white">API Request</h5>
+                        <p class="mb-0 text-white-50">Sends processed sequence data as JSON request to <strong>FastAPI hosted on Render</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="d-flex align-items-center p-3 rounded-4 bg-dark bg-opacity-50 border border-info border-opacity-25 shadow">
+                    <span class="badge bg-info text-dark rounded-circle p-3 me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">6</span>
+                    <div>
+                        <h5 class="mb-1 fw-bold text-white">Prediction Output</h5>
+                        <p class="mb-0 text-white-50">FastAPI backend processes the sequence and returns the predicted sign.</p>
+                    </div>
+                </div>
+
+                <!-- Step 7: Decision Box -->
+                <div class="p-4 rounded-4 bg-dark bg-opacity-75 border border-info shadow-lg mt-2">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="badge bg-info text-dark rounded-circle me-3 fs-5 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">7</span>
+                        <h5 class="mb-0 text-info fw-bold fs-4">Verification & Gamification Loop</h5>
+                    </div>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="p-3 rounded-3 bg-success bg-opacity-20 border border-success h-100">
+                                <span class="badge bg-success mb-2 fs-6">Match Correct ✅</span>
+                                <p class="small text-light mb-0">Player receives instant correct sign feedback, progresses in the game, and gets stars.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-3 rounded-3 bg-danger bg-opacity-20 border border-danger h-100">
+                                <span class="badge bg-danger mb-2 fs-6">Mismatch ❌</span>
+                                <p class="small text-light mb-0">Player gets feedback to try again and cannot progress until performed correctly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="darker-blue-bg text-white border-top border-info border-opacity-25 pt-5 pb-3 position-relative overflow-hidden">
+        <!-- خلفية جمالية خفيفة (اختياري) -->
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row g-4 justify-content-between mb-4">
+
+                <!-- Column 1: About Signiverse -->
+                <div class="col-12 col-lg-4 text-center text-lg-start">
+                    <h3 class="hero-title text-info fs-2 mb-3">Signiverse</h3>
+                    <p class="text-white-50 small mb-3">
+                        An AI-powered serious mobile game designed to help Deaf and Hard-of-Hearing children in Jordan master Jordanian Sign Language (JSL) through real-time feedback and gamified learning.
+                    </p>
+                    <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25 px-3 py-2 rounded-pill small">
+                        🎓 University of Jordan - Graduation Project
+                    </span>
+                </div>
+
+                <!-- Column 2: Tech Stack / Powered By -->
+                <div class="col-6 col-md-4 col-lg-3 text-center text-lg-start">
+                    <h5 class="my-font text-info mb-3 fs-5">Powered By</h5>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2">
+                        <li><i class="bi bi-cpu text-info me-2"></i>Unity 3D Engine</li>
+                        <li><i class="bi bi-camera text-info me-2"></i>MediaPipe Landmark Tracking</li>
+                        <li><i class="bi bi-lightning text-info me-2"></i>FastAPI & Python</li>
+                        <li><i class="bi bi-cloud text-info me-2"></i>Render Cloud Hosting</li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Navigation -->
+                <div class="col-6 col-md-4 col-lg-2 text-center text-lg-start">
+                    <h5 class="my-font text-info mb-3 fs-5">Quick Links</h5>
+                    <ul class="list-unstyled text-white-50 small d-flex flex-column gap-2">
+                        <li><a href="#challenge" class="text-white-50 text-decoration-none hover-info">The Challenge</a></li>
+                        <li><a href="#team" class="text-white-50 text-decoration-none hover-info">Our Team</a></li>
+                        <li><a href="#architecture" class="text-white-50 text-decoration-none hover-info">System Architecture</a></li>
+                        <li><a href="/docs/SigniVerse_Final_Documentation.pdf" download class="text-white-50 text-decoration-none hover-info">Documentation (PDF)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Key Features -->
+                <div class="col-12 col-md-4 col-lg-3 text-center text-lg-start">
+                    <h5 class="my-font text-info mb-3 fs-5">Key Highlights</h5>
+                    <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+                        <span class="badge bg-dark bg-opacity-50 text-light border border-secondary px-2 py-2">Real-Time JSL</span>
+                        <span class="badge bg-dark bg-opacity-50 text-light border border-secondary px-2 py-2">Interactive Minigames</span>
+                        <span class="badge bg-dark bg-opacity-50 text-light border border-secondary px-2 py-2">4th Place Innovate 2026</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary opacity-25 my-4">
+
+            <!-- Bottom Copyright Row -->
+            <div class="row align-items-center justify-content-between text-center text-md-start small text-white-50">
+                <div class="col-12 col-md-6 mb-2 mb-md-0">
+                    &copy; 2026 <strong class="text-white">Signiverse Team</strong>. All rights reserved.
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <span>Designed & Developed with ❤️ for JSL Learners in Jordan</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
