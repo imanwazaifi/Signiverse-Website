@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- روابط Bootstrap الصحيحة -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -14,12 +15,18 @@
                 src: url('./fonts/Mansalva-Regular.ttf') format('truetype');
             }
 
-            .Mansalva-font {
+            /*.Mansalva-font {
                 font-family: 'Mansalva', cursive !important;
-            }
-
+            }*/
+            /*.hero-title {
+                font-family: 'Mansalva', cursive !important;
+                font-size: 100px;
+            }*/
+             /*.my-font {
+                font-family: 'Henny_Penny', cursive !important;
+            }*/
             .hero {
-                background-image: url('images/background_sky1_l.png');
+                background-image: url('/images/background_sky1_l.png');
                 background-repeat: repeat;
                 animation: moveBG 20s linear infinite;
             }
@@ -33,25 +40,15 @@
                     background-position: 512px 512px;
                 }
             }
-
-            .hero-title {
-                font-family: 'Henny_Penny', cursive !important;
-                font-size: 100px;
-            }
-
-            .my-font {
-                font-family: 'Henny_Penny', cursive !important;
-            }
-            /* Team Members Section */
             .dark-blue-bg {
                 background: #12166A;
-                /*background: #0C043D;*/
             }
-
             .darker-blue-bg {
                 background: #0C043D;
             }
-
+            .website-font{
+                font-family: cursive;
+            }
             .team-card {
                 background: #0C043D;
                 border-color: #00ffff;
@@ -59,34 +56,36 @@
                 backdrop-filter: blur(15px);
                 transition: transform 0.3s ease;
             }
-
             .team-card:hover {
                 transform: translateY(-10px);
                 box-shadow: 0 0 20px #00ffff;
             }
             .glow-text {
-                color: #ffffff; 
+                color: #ffffff; /* لون النص الأساسي */
                 text-shadow: 0 0 1px #00ffff, 0 0 2px #00ffff, 0 0 3px #00ffff, 0 0 4px #00ffff;
             }
     </style>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark darker-blue-bg border-bottom border-info border-opacity-25 shadow-lg">
-        <div class="container">
+    <nav class="navbar navbar-expand-lg sticky-top darker-blue-bg border-bottom border-info border-opacity-25 shadow-lg">
+        <div class="container website-font">
             <!-- Brand Logo / Name -->
-            <a class="navbar-brand my-font glow-text fs-2" href="#">Signiverse</a>
-
+            <h2 class=" text-white website-font">Signiverse</h2>
             <!-- Mobile Toggle Button -->
-            <button class="navbar-toggler border-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler border-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="text-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </span>
             </button>
 
             <!-- Nav Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-lg-3 align-items-center text-center Mansalva-font py-3 py-lg-0">
+                <ul class="navbar-nav ms-auto gap-lg-3 align-items-center text-center website-font py-4 py-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white hover-info fw-semibold" href="#challenge">Challenge & Solution</a>
+                        <a class="nav-link text-white fw-semibold" href="#challenge">Challenge & Solution</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white hover-info fw-semibold" href="#team">Team Members</a>
@@ -102,7 +101,7 @@
                     </li>
                     <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
                         <a href="docs/SigniVerse_Final_Documentation.pdf" download="Signiverse_Documentation.pdf" class="btn btn-outline-info btn-sm px-4 rounded-pill text-white shadow-sm">
-                            Documentation 📄
+                            Documentation
                         </a>
                     </li>
                 </ul>
@@ -111,23 +110,23 @@
     </nav>
     <!--landing page-->
     <section class="hero vh-100 d-flex align-items-center justify-content-center">
-        <h1 class="fw-bold text-white text-center hero-title">
+        <h1 class="fw-bold text-white text-center website-font display-1">
             Signiverse
         </h1>
     </section>
     <!--Challenge and solution-->
-    <section id="challenge" class="dark-blue-bg position-relative">
-        <div class="container vh-75 p-5 d-flex flex-column text-white justify-content-center">
-            <h1 class="Mansalva-font glow-text my-4" style="font-size: 70px;">Challenge</h1>
+    <section id="challenge" class="min-vh-100 dark-blue-bg d-flex flex-column text-white align-items-center justify-content-center">
+        <div class="container h-100 p-5  website-font">
+            <h1 class="glow-text my-4" style="font-size: 70px;">Challenge</h1>
 
-            <h2 class="Mansalva-font">
+            <h2>
                 Deaf and Hard-of-Hearing children in Jordan have limited access to interactive Jordanian Sign Language learning tools.<br>
                 Most existing independent Jordanian Sign Language learning methods lack engagement and do not provide immediate feedback,
                 making independent practice difficult for deaf children.
             </h2>
 
-            <h1 class="Mansalva-font glow-text my-4" style="font-size: 70px;">Our solution</h1>
-            <h2 class="Mansalva-font mb-5">
+            <h1 class="glow-text my-4" style="font-size: 70px;">Our solution</h1>
+            <h2 class="mb-5">
                 Develop SigniVerse, an AI-powered serious mobile game that uses real-time sign
                 recognition and instant feedback to help children learn Jordanian Sign Language through
                 interactive activities and independent practice.</p>
@@ -138,61 +137,57 @@
 
     <!--team-->
     <!--team section-->
-    <section id="team" class="darker-blue-bg py-5 position-relative">
-        <img src="images/objects12_s.png"
-             class="img-fluid position-absolute top-0 end-0 translate-middle-y"
-             style="width: 500px; height: auto;" />
-
-        <div class="container py-4">
-            <div class="row g-4 justify-content-center align-items-stretch">
+    <section id="team" class="min-vh-100 darker-blue-bg">
+        <div class="container website-font py-4 d-flex justify-content-center align-items-center">
+            <div class="row h-100 w-100 g-5 justify-content-center align-items-strech">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <h1 class="Mansalva-font text-white text-center my-2" style="font-size: 70px;">Team Members</h1>
+                    <h1 class="website-font text-white text-center my-1" style="font-size: 70px;">Team Members</h1>
                     <p class="text-info opacity-75 fs-5">The minds behind Signiverse</p>
                 </div>
                 <!-- Member 1 -->
-                <div class="col-12 col-lg-3 d-flex align-items-stretch">
+                <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center">
                     <div class="card w-100 rounded-5 team-card overflow-hidden">
-                        <img class="card-img-top object-fit-cover" src="images/girl_1.png" alt="Rama Nedal" style="height: 500px;" />
+                        <img class="card-img-top object-fit-cover w-100" src="images/girl_1.png" alt="Rama Nedal" style="height: auto;" />
                         <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
                             <h4 class="card-title h5 mt-2">Rama Nedal</h4>
                             <p class="card-text small text-white-50">Signiverse Game developer and designer</p>
-                            <a href="https://www.linkedin.com/in/rama-nedal-181331302/" class="btn  btn-outline-info btn-sm px-4 rounded-pill">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/rama-nedal-181331302/" class="btn btn-outline-info btn-lg px-4 rounded-pill">LinkedIn</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 2 -->
-                <div class="col-12 col-lg-3 d-flex align-items-stretch">
+                <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center">
                     <div class="card w-100 rounded-5 team-card overflow-hidden">
-                        <img class="card-img-top object-fit-cover" src="images/girl_2.png" alt="Farah Alshalalfeh" style="height: 500px;" />
+                        <img class="card-img-top object-fit-cover w-100" src="images/girl_2.png" alt="Farah Alshalalfeh" style="height: auto;" />
                         <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
                             <h4 class="card-title h5 mt-2">Farah Alshalalfeh</h4>
                             <p class="card-text small text-white-50">Computer vision and machine learning developer</p>
-                            <a href="https://www.linkedin.com/in/farah-alshalalfeh-a11ab8283/" class="btn  btn-outline-info btn-sm px-4 rounded-pill" text-white>LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/farah-alshalalfeh-a11ab8283/" class="btn btn-outline-info btn-lg px-4 rounded-pill">LinkedIn</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 3 -->
-                <div class="col-12 col-lg-3 d-flex align-items-stretch">
+                <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center">
                     <div class="card w-100 rounded-5 team-card overflow-hidden">
-                        <img class="card-img-top object-fit-cover" src="images/girl_3.png" alt="Eman Wazayfy" style="height: 500px;" />
+                        <img class="card-img-top object-fit-cover w-100" src="images/girl_3.png" alt="Eman Wazayfy" style="height: auto;" />
                         <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
                             <h4 class="card-title h5 mt-2">Eman Wazayfy</h4>
                             <p class="card-text small text-white-50">Signiverse Game developer and designer</p>
-                            <a href="https://www.linkedin.com/in/eman-wazayfy-0aa39b247" class="btn  btn-outline-info btn-sm px-4 rounded-pill">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/eman-wazayfy-0aa39b247" class="btn  btn-outline-info btn-lg px-4 rounded-pill">LinkedIn</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 4 -->
-                <div class="col-12 col-lg-3 d-flex align-items-center">
+                <div class="col-12 col-lg-3 d-flex justify-content-center align-items-center">
                     <div class="card w-100 rounded-5 team-card overflow-hidden">
-                        <img class="card-img-top object-fit-cover" src="images/girl_4.png" alt="Yara Yaghi" style="height: 500px;" />
+                        <img class="card-img-top object-fit-cover w-100" src="images/girl_4.png" alt="Yara Yaghi" style="height: auto;" />
                         <div class="card-body text-center text-white shadow-lg d-flex flex-column align-items-center justify-content-between" style="background-color: #12166A;">
                             <h4 class="card-title h5 mt-2">Yara Yaghi</h4>
                             <p class="card-text small text-white-50">Computer vision and machine learning developer</p>
-                            <a href="https://www.linkedin.com/in/yara1604/" class="btn  btn-outline-info btn-sm px-4 rounded-pill">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/yara1604/" class="btn  btn-outline-info btn-lg px-4 rounded-pill">LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -202,30 +197,39 @@
     </section>
 
     <!-- University of Jordan & Supervisor Section (Full Height) -->
-    <section id="supervisor" class="dark-blue-bg vh-75 position-relative">
-        <div class="container-fluid h-100">
+    <section id="supervisor" class="dark-blue-bg d-flex align-items-center justify-content-center min-vh-100">
+        <div class="container website-font p-5">
             <div class="row align-items-center justify-content-center">
-                <div class="col-12 h-100 pb-4 d-flex flex-column justify-content-center align-items-center text-center">
-                    <img src="images/dr.webp" class="rounded-circle my-4" style="width: 300px;" />
-                    <h2 class="Mansalva-font text-white display-5 mb-5">
+                <div class="col-12 pb-4 d-flex flex-column justify-content-center align-items-center text-center">
+                    <img src="/images/dr.webp" class="rounded-circle border border-3 border-info my-4" style="width: 300px;" />
+                    <h2 class="website-font text-white display-5 mb-5">
                         This project was supervised by <span class="text-info fw-bold">Dr. Abdelbaset J. Assaf</span> from the <span class="text-info">University of Jordan</span>
                     </h2>
                     <!-- Download Button Container -->
-                    <div class="d-flex justify-content-center justify-content-center pt-2">
-                        <a href="docs/SigniVerse_Final_Documentation.pdf" download="Signiverse_Documentation.pdf" class="btn btn-outline-info btn-download-pdf px-4 py-3 rounded-pill fw-bold shadow">
-                            <span>Download Documentation</span>
-                        </a>
+                    <div class="d-flex flex-column align-items-center gap-3 pt-2">
+                        <div class="w-100" style="max-width: 320px;">
+                            <a href="docs/SigniVerse_Final_Documentation.pdf" download="Signiverse_Documentation.pdf" class="btn btn-outline-info btn-download-pdf w-100 py-3 rounded-pill fw-bold shadow text-center">
+                                <span>Download Documentation</span>
+                            </a>
+                        </div>
+                        <div class="w-100" style="max-width: 320px;">
+                            <a href="docs/Signiverse_Poster.pdf" download="Signiverse_Poster.pdf" class="btn btn-outline-info btn-download-pdf w-100 py-3 rounded-pill fw-bold shadow text-center">
+                                <span>Download Our Poster</span>
+                            </a>
+                        </div>
+                        <div class="w-100" style="max-width: 320px;">
+                            <a href="docs/final-report-ntp-SigniVerse.pdf" download="final-report-ntp-SigniVerse.pdf" class="btn btn-outline-info btn-download-pdf w-100 py-3 rounded-pill fw-bold shadow text-center">
+                                <span>Download NTP Report</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!--competitions section-->
-    <section id="competitions" class="darker-blue-bg d-flex flex-column justify-content-center align-items-center position-relative">
-        <img src="images/simple_planet_22_s.png"
-             class="img-fluid position-absolute top-0 end-0 translate-middle-y"
-             style="width: 300px; height: auto;" />
-        <div class="container my-5" style="max-width: 1000px;">
+    <section id="competitions" class="min-vh-100 d-flex flex-column justify-content-center align-items-center hero">
+        <div class="container my-5 website-font" style="width:auto;">
             <div class="my-3 text-center text-white">
                 <h2 class="Mansalva-font fw-bold" style="font-size: 70px;">Competitions & Achievements</h2>
                 <p class="text-white-50">Highlights of the competitions and hackathons our team has participated in</p>
@@ -242,7 +246,7 @@
                     <!-- first item-->
                     <div class="carousel-item active" data-bs-interval="60000">
                         <div class="card border-0">
-                            <img src="images/innovateToStart.jpeg" style="height: 500px;" />
+                            <img src="/images/innovateToStart.jpeg" style="height: 500px;" />
                             <div class="card-img-overlay d-flex flex-column justify-content-end p-4" style="background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
                                 <div class="d-flex gap-2 mb-2">
                                     <span class="badge bg-warning text-dark align-self-start px-3 py-2 fs-6">4th Place Winner 🏅</span>
@@ -261,7 +265,7 @@
                     <!--second item-->
                     <div class="carousel-item" data-bs-interval="60000">
                         <div class="card border-0">
-                            <img src="images/GJU Event.jpeg" style="height: 500px;" />
+                            <img src="/images/GJU Event.jpeg" style="height: 500px;" />
                             <div class="card-img-overlay d-flex flex-column justify-content-end p-4" style="background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);">
                                 <h3 class="card-title fw-bold fs-2 text-white">GJU-3030 Competition 🏫</h3>
 
@@ -303,16 +307,12 @@
         </div>
     </section>
 
-      
-    <!--System architecture -->
     <!-- System Architecture Section -->
-    <section id="architecture" class="dark-blue-bg py-5 text-white position-relative">
-
-        <div class="container my-4">
-
+    <section id="architecture" class="dark-blue-bg py-5 text-white min-vh-100 d-flex align-items-center justify-content-center">
+        <div class="container my-4 website-font">
             <!-- Title & Subtitle -->
             <div class="text-center mb-5">
-                <h1 class="Mansalva-font display-4 fw-bold text-info mb-2">System Architecture</h1>
+                <h1 class="display-4 fw-bold text-info mb-2">System Architecture</h1>
                 <p class="text-white-50 fs-5">How Signiverse processes real-time sign recognition behind the scenes</p>
             </div>
 
@@ -401,6 +401,7 @@
     </section>
     <!-- Footer Section -->
     <footer class="darker-blue-bg text-white border-top border-info border-opacity-25 pt-5 pb-3 position-relative overflow-hidden">
+        <!-- خلفية جمالية خفيفة (اختياري) -->
         <div class="container position-relative" style="z-index: 1;">
             <div class="row g-4 justify-content-between mb-4">
 
@@ -462,6 +463,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
